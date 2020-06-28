@@ -7,16 +7,8 @@ namespace vidak_backend
 
         private void check(decimal a, decimal b)
         {
-            Console.Write($"{a} + {b} > 10? ");
-            bool something = a + b > 10m;
-            if (something)
-            {
-                Console.Write("It's true");
-            }
-            else
-            {
-                Console.Write("It's false");
-            }
+            var something = a + b > 10m;
+            Console.WriteLine($"{a} + {b} > 10? " + (something ? "It's true" : "It's false"));
         }
 
         public void DoMath()
@@ -26,7 +18,6 @@ namespace vidak_backend
             check(a, b);
             b = 3;
             check(a, b);
-            var line = Console.ReadLine();
         }
     }
 }
